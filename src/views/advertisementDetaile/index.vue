@@ -12,16 +12,50 @@
     <div class="detail">
       {{ detail.task }}
     </div>
-    <div class="title">
+    <div class="title image-title">
       图片介绍：
     </div>
     <div class="image">
-      <img src="../../assets/image/zy1.png" v-for="(item, index) in detail.img" :key="index" />
+      <img :src="item" v-for="(item, index) in detail.img" :key="index" @click="viewImg(index)"/>
+    </div>
+
+    <div class="title downloadTitle">
+      {{ detail.downloadTitle }}
+    </div>
+    <div class="url">
+      <a :href="detail.downloadUrl" target="_blank">{{ detail.downloadUrl }}</a>
+    </div>
+    <div class="title ">
+      {{ detail.sellUrlTitle }}
+    </div>
+
+    <div class="url ">
+      <a :href="detail.sellUrl" target="_blank">{{ detail.sellUrl }}</a>
+    </div>
+    
+    <div class="title ">
+      {{ detail.sellAppTitle }}
+    </div>
+    <div class="url van-ellipsis">
+      <a :href="detail.sellAppUrl" target="_blank">{{ detail.sellAppUrl }}</a>
+    </div>
+    <div class="title">
+      提现渠道
+    </div>
+    <div class="url">
+      {{detail.channel}}
+    </div>
+    <div class="title">
+      邀请码: <span>{{detail.code}}</span>
+    </div>
+    <div>
+
     </div>
   </div>
 </template>
 
 <script>
+import { ImagePreview } from 'vant';
 export default {
   data() {
     return {
@@ -30,6 +64,14 @@ export default {
   },
   created() {
     this.detail = this.$route.params
+  },
+  methods:{
+    viewImg(id){
+      ImagePreview({
+        images:this.detail.img,
+        startPosition:id
+      })
+    }
   }
 }
 </script>
@@ -45,23 +87,31 @@ export default {
 .title {
   font-size: 18px;
   font-weight: bold;
+  text-align: center;
 }
 .label {
   color: blue;
-  font-size: 18px;
-  font-weight: bold;
 }
 .detail {
   text-indent: 28px;
 }
+.url {
+  text-align: center;
+  font-size: 18px;
+}
 .everyDay {
   color: red;
 }
-.image{
+.image-title {
+  color: #00b9ff;
+}
+.image {
   display: flex;
   justify-content: space-around;
-  img{
+  flex-flow: row wrap;
+  img {
     width: 30%;
+    margin: 5px 0;
   }
 }
 </style>

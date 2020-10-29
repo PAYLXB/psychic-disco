@@ -8,6 +8,7 @@ import {
     Tabbar,
     TabbarItem,
     NavBar,
+    NoticeBar,
     Sticky,
     Col,
     Row,
@@ -23,6 +24,7 @@ Vue.use(Cell)
 Vue.use(CellGroup)
 Vue.use(List)
 Vue.use(NavBar)
+Vue.use(NoticeBar)
 Vue.use(Sticky)
 Vue.use(Col)
 Vue.use(Row)

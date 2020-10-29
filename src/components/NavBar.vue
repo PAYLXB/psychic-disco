@@ -5,6 +5,7 @@
       :left-arrow="showLeftArrow"
       @click-left="onClickLeft"
       @click-right="onClickRight"
+      style="background:#000"
     />
   </van-sticky>
 </template>
@@ -28,7 +29,7 @@ export default {
     $route(newVal) {
       console.log(newVal)
       this.title = newVal.meta.title
-      this.showLeftArrow = newVal.meta.fater ? false : true
+      this.showLeftArrow = newVal.meta.title !== '广告类详情' ? false : true
     }
   }
 }
