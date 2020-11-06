@@ -26,10 +26,10 @@ export const constantRouterMap = [{
             meta: { title: '广告类', keepAlive: false, fater: true }
         },
         {
-            path: '/my',
-            name: 'My',
+            path: '/btb',
+            name: 'Btb',
             component: () =>
-                import ('@/views/my/index'),
+                import ('@/views/btb/index'),
             meta: { title: '挖矿类', keepAlive: false, fater: true }
         },
         {
@@ -38,6 +38,13 @@ export const constantRouterMap = [{
             component: () =>
                 import ('@/views/advertisementDetaile/index'),
             meta: { title: '广告类详情', keepAlive: false, fater: true }
+        },
+        {
+            path: '/btbDetaile',
+            name: 'BtbDetaile',
+            component: () =>
+                import ('@/views/btbDetaile/index'),
+            meta: { title: '挖矿类详情', keepAlive: false, fater: true }
         }
     ]
 }]

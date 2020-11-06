@@ -16,8 +16,9 @@
       图片介绍：
     </div>
     <div class="image">
-      <img :src="item" v-for="(item, index) in detail.img" :key="index" @click="viewImg(index)"/>
+      <img :src="item" v-for="(item, index) in detail.img" :key="index" @click="viewImg(index)" />
     </div>
+    ;
 
     <div class="title downloadTitle">
       {{ detail.downloadTitle }}
@@ -32,7 +33,7 @@
     <div class="url ">
       <a :href="detail.sellUrl" target="_blank">{{ detail.sellUrl }}</a>
     </div>
-    
+
     <div class="title ">
       {{ detail.sellAppTitle }}
     </div>
@@ -43,19 +44,24 @@
       提现渠道
     </div>
     <div class="url">
-      {{detail.channel}}
+      {{ detail.channel }}
     </div>
     <div class="title">
-      邀请码: <span>{{detail.code}}</span>
+      邀请码:
     </div>
     <div>
-
+      <div class="image" v-if="detail.code" >
+        <img :src="detail.code" @click="viewCode" />
+      </div>
+      <div v-else style="text-align:center;color:red;font-weight:bold;font-size:20px">
+        暂无邀请码，待更新
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { ImagePreview } from 'vant';
+import { ImagePreview } from 'vant'
 export default {
   data() {
     return {
@@ -65,11 +71,17 @@ export default {
   created() {
     this.detail = this.$route.params
   },
-  methods:{
-    viewImg(id){
+  methods: {
+    viewImg(id) {
       ImagePreview({
-        images:this.detail.img,
-        startPosition:id
+        images: this.detail.img,
+        startPosition: id
+      })
+    },
+    viewCode() {
+      ImagePreview({
+        images: [this.detail.code],
+        startPosition: 0
       })
     }
   }
@@ -112,6 +124,7 @@ export default {
   img {
     width: 30%;
     margin: 5px 0;
+    object-fit: contain;
   }
 }
 </style>

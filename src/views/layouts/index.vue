@@ -38,7 +38,7 @@ export default {
         {
           title: '挖矿类',
           to: {
-            name: 'My'
+            name: 'Btb'
           },
           icon: 'gold-coin'
         }
