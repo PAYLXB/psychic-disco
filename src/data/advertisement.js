@@ -94,6 +94,21 @@ let img = {
         require('./../assets/image/ydjsb2.png'),
         require('./../assets/image/ydjsb3.png'),
     ],
+    qqbl: [
+        require('./../assets/image/qqbl1.jpg'),
+        require('./../assets/image/qqbl2.jpg'),
+        require('./../assets/image/qqbl3.jpg'),
+    ],
+    qc: [
+        require('./../assets/image/qc1.jpg'),
+        require('./../assets/image/qc2.jpg'),
+        require('./../assets/image/qc3.jpg'),
+    ],
+    ubsh: [
+        require('./../assets/image/ubsh1.jpg'),
+        require('./../assets/image/ubsh2.jpg'),
+        require('./../assets/image/ubsh3.jpg'),
+    ],
 }
 
 let code = {
@@ -123,8 +138,8 @@ let code = {
 }
 const data = [
     {
-        title: '众赢时空',
-        label: '众嬴时空注册领任务：',
+        title: '众赢兼职',
+        label: '众赢兼职注册领任务：',
         detail: '识别推荐人二维码：先下载app再去注册app→我的→实名认证→支付认证费用→返回我的→我的任务→我的任务→一般实名认证了会自动释放体验任务',
         task: '首页→我的→每日签到→五个视频广告任务→随便看完四个→最上面签到→释放0.5个红豆→任务完成',
         img: img.zysk,
@@ -146,6 +161,31 @@ const data = [
         channel: '支付宝',
         //邀请码
         code: code.zysk
+    },
+    {
+        title: '全球博览',
+        label: '全球博览注册领任务：',
+        detail: '注册登陆→我的→认证→返回我的→任务中心→兑换流量包→新手流浪包',
+        task: '任务：我的→任务中心→看三次广告',
+        img: img.qqbl,
+        //下载标题
+        downloadTitle: '',
+        //下载地址
+        downloadUrl: '',
+        //下载备注
+        downloadInfo: '',
+        //交易地址标题
+        sellUrlTitle: '全球博览交易流程',
+        //交易地址
+        sellUrl: '转出到GDS，到GDS平台进行交易',
+        //交易APP下载地址标题
+        sellAppTitle: 'GDSapp下载地址',
+        //交易APP下载地址
+        sellAppUrl: 'https://myetc.oss-cn-beijing.aliyuncs.com/app/global_wallet_v2.2.7.apk',
+        //提现渠道
+        channel: '支付宝',
+        //邀请码
+        code: code.qqbl
     },
     {
         title: '凹音短视频',
@@ -587,6 +627,66 @@ const data = [
         channel: '支付宝',
         //邀请码
         code: code.yddsp
+    },
+    {
+        //项目
+        title: '趣充',
+        //标题
+        label: '趣充领取任务',
+        //使用介绍
+        detail: '注册登陆→我的→任务→试炼酷轮',
+        //每日任务
+        task: '任务：首页→一键省电→等待646秒→存入钱包',
+        //图片展示
+        img: img.qc,
+        //下载标题
+        downloadTitle: '',
+        //下载地址
+        downloadUrl: '',
+        //下载备注
+        downloadInfo: '',
+        //交易地址标题
+        sellUrlTitle: '趣充糖豆交易所APP下载:',
+        //交易地址
+        sellUrl: 'https://binance-1259603563.file.myqcloud.com/pack/binance_1.31.2_ruiji-bian-2.apk',
+        //交易APP下载地址标题
+        sellAppTitle: '',
+        //交易APP下载地址
+        sellAppUrl: '',
+        //提现渠道
+        channel: '支付宝',
+        //邀请码
+        code: code.qc
+    },
+    {
+        //项目
+        title: 'U比生活',
+        //标题
+        label: 'U比生活领取任务',
+        //使用介绍
+        detail: '注册登陆→我的→身份认证→返回→钻石→任务包→公租房',
+        //每日任务
+        task: '任务：钻石→每日任务完成',
+        //图片展示
+        img: img.ubsh,
+        //下载标题
+        downloadTitle: '',
+        //下载地址
+        downloadUrl: '',
+        //下载备注
+        downloadInfo: '',
+        //交易地址标题
+        sellUrlTitle: '交易待定:',
+        //交易地址
+        sellUrl: '',
+        //交易APP下载地址标题
+        sellAppTitle: '',
+        //交易APP下载地址
+        sellAppUrl: '',
+        //提现渠道
+        channel: '',
+        //邀请码
+        code: code.ubsh
     },
 ]
 

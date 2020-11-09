@@ -18,6 +18,15 @@ let img = {
         require('./../assets/image/ttyy2.png'),
         require('./../assets/image/ttyy3.png'),
     ],
+    lt: [
+        require('./../assets/image/lt1.jpg'),
+        require('./../assets/image/lt2.jpg'),
+        require('./../assets/image/lt3.jpg'),
+    ],
+    ezf: [
+        require('./../assets/image/ezf1.jpg'),
+        require('./../assets/image/ezf2.jpg'),
+    ],
 }
 
 let code = {
@@ -122,7 +131,56 @@ const data = [
         //邀请码
         code: code.ttyy
     },
-
+    {
+        title: 'E支付',
+        label: 'E支付注册领取任务：',
+        detail: '注册登陆→我的→实名认证→矿场→已购买',
+        task: '任务：3小时后手动点击一下领取，看一分钟广告。发现→看广告领UEP→领取→看二十次广告',
+        img: img.ezf,
+        //下载标题
+        downloadTitle: '',
+        //下载地址
+        downloadUrl: '',
+        //下载备注
+        downloadInfo: '',
+        //交易地址标题
+        sellUrlTitle: '',
+        //交易地址
+        sellUrl: '',
+        //交易APP下载地址标题
+        sellAppTitle: 'E支付平台交易：',
+        //交易APP下载地址
+        sellAppUrl: '内网交易',
+        //提现渠道
+        channel: '支付宝',
+        //邀请码
+        code: code.ezf
+    },
+    {
+        title: '链淘',
+        label: '链淘注册领取任务：',
+        detail: '注册登陆→我的→设置→账户安全→实名认证→获得一个总产12.95枚ccq的初级任务',
+        task: '任务：完成每日任务即可',
+        img: img.lt,
+        //下载标题
+        downloadTitle: '',
+        //下载地址
+        downloadUrl: '',
+        //下载备注
+        downloadInfo: '',
+        //交易地址标题
+        sellUrlTitle: '',
+        //交易地址
+        sellUrl: '',
+        //交易APP下载地址标题
+        sellAppTitle: '链淘平台交易：',
+        //交易APP下载地址
+        sellAppUrl: '目前还未开放交易平台（可通过线下交易，目前一个ccq价格在10元左右一个！）',
+        //提现渠道
+        channel: '支付宝',
+        //邀请码
+        code: code.lt
+    },
 ]
 
 export default data
